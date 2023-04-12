@@ -15,7 +15,7 @@ pipeline {
                 {
                     def scannerHome = tool 'SonarScanner';
                     withSonarQubeEnv() {
-                      bat "${scannerHome}/bin/sonar-scanner"
+                      bat "${scannerHome}/bin/sonar-scanner -D\"sonar.projectKey=Bandit\""                        
                     }
                 }
             }
